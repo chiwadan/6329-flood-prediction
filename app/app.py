@@ -12,10 +12,10 @@ def hello_world():
     if request_type_str == 'GET':
         return render_template('index.html', href2='')
     else:
-        myyear = request.form['year']
-        myannual = request.form['annual']
+        myyear = request.form['YEAR']
+        myannual = request.form['ANNUAL']
         model = load('app/flood-prediction.joblib')
-        np_arr = np.array([year, annual])
+        np_arr = np.array([myyear, myannual])
         predictions = model.predict([np_arr])  
         predictions_to_str = str(predictions)
         #return predictions_to_str
