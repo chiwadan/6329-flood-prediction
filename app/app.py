@@ -20,5 +20,5 @@ def hello_world():
         predictions = model.predict([np_arr])  
         predictions_to_str = str(predictions)
         #return predictions_to_str
-        return render_template('index.html', href2='The suitable bread for you (age:'+str(myyear)+' ,gender:'+str(myannual)+') is:'+predictions_to_str)
+        #return render_template('index.html', href2='The suitable bread for you (age:'+str(myyear)+' ,gender:'+str(myannual)+') is:'+predictions_to_str)
 
