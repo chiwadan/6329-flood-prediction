@@ -18,6 +18,6 @@ def hello_world():
         np_arr = np.array([myyear, myannual])
         predictions = model.predict([np_arr])  
         predictions_to_str = str(predictions)
-        return predictions_to_str
-        #return render_template('index.html', href2='The suitable bread for you (age:'+str(myyear)+' ,gender:'+str(myannual)+') is:'+predictions_to_str)
+        #return predictions_to_str
+        return render_template('index.html', href2='The result of the flood prediction (year:'+str(myyear)+' , annual precipitation:'+str(myannual)+') is(1 means it will happen, 0 means it will not happen):'+predictions_to_str)
 
