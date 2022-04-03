@@ -14,6 +14,8 @@ def hello_world():
     else:
         year = request.form['YEAR']
         annual = request.form['ANNUAL']
+        print('year')
+        print('annual')
         model = load('app/flood-prediction.joblib')
         np_arr = np.array([year, annual])
         predictions = model.predict([np_arr])  
